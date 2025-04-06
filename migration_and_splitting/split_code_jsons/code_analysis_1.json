@@ -1,0 +1,21 @@
+{
+    "libraries": {
+        "system": [
+            "iostream",
+            "utility",
+            "vector"
+        ]
+    },
+    "functions": {
+        "bubbleSort": {
+            "description": "Sorts a vector of integer pairs based on the first element using the bubble sort algorithm",
+            "code": "void bubbleSort(std::vector<std::pair<int, int>>& arr) {\n    bool swapped;\n    int size = arr.size();\n    for (int i = 0; i < size - 1; i++) {\n        swapped = false;\n        for (int j = 0; j < size - i - 1; j++) {\n            if (arr[j].first > arr[j + 1].first) {\n                std::swap(arr[j], arr[j + 1]);\n                swapped = true;\n            }\n        }\n        if (!swapped)\n            break;\n    }\n}",
+            "is_algorithm": "True"
+        }
+    },
+    "main": {
+        "description": "Demonstrates sorting an array of pairs where each pair consists of an integer from the original array and its index, using bubble sort",
+        "code": "int main() {\n    int raw_arr[] = {64, 34, 25, 12, 22, 11, 90};\n    int size = sizeof(raw_arr) / sizeof(raw_arr[0]);\n\n    std::vector<std::pair<int, int>> arr;\n    for(int i = 0; i < size; i++) {\n        arr.push_back({raw_arr[i], i});\n    }\n\n    std::cout << \"Original array with indices: \";\n    for (const auto& p : arr) {\n        std::cout << \"(\" << p.first << \",\" << p.second << \") \";\n    }\n\n    bubbleSort(arr);\n\n    std::cout << \"\\nSorted array with original indices: \";\n    for (const auto& p : arr) {\n        std::cout << \"(\" << p.first << \",\" << p.second << \") \";\n    }\n    std::cout << std::endl;\n\n    return 0;\n}",
+        "is_algorithm": "False"
+    }
+}
