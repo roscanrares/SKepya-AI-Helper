@@ -24,6 +24,6 @@ Skepya-AI-Helper este un proiect experimental care integrează componente AI pen
 1. Clonează repo-ul:
    ```bash
    git clone https://github.com/roscanrares/SKepya-AI-Helper.git
-
-2. Se ruleaza fisierul ([main.py](https://github.com/roscanrares/Skepya-AI-Helper/blob/main/migration_and_splitting/main.py)) (se poate modifica dupa nevoi; fie ca e rulat ca script din terminal/alta aplicatie sau direct in IDE)
-3. Se pot modifica si prompt-urile agentilor in functie de nevoi (migrarea este momentan gandita pentru C++ -> Java)
+2. Se creeaza un fisier .ENV in care se adauga cheia API OpenAI pentru a putea rula programul
+3. Se ruleaza fisierul ([main.py](https://github.com/roscanrares/Skepya-AI-Helper/blob/main/migration_and_splitting/main.py)) (se poate modifica dupa nevoi; fie ca e rulat ca script din terminal/alta aplicatie sau direct in IDE)
+4. Se pot modifica si prompt-urile agentilor in functie de nevoi (migrarea este momentan gandita pentru C++ -> Java)
